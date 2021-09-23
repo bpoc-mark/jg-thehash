@@ -6,6 +6,7 @@
 
 .company_profile {
     background-color: #323C3C;
+    padding-top: 66px;
 
     // global style
     .l-wrap {
@@ -37,13 +38,18 @@
         margin: 0;
         padding-bottom: 20px;
         color: #fff;
-        padding-top: 188px;
+        padding-top: 122px;
 
         @media (max-width: 750px) {
-            padding-top: 85px;
+            padding-top: 82px;
         }
-
     }
+
+    header_title:nth-child(0) {
+        display: none;
+    }
+
+    
 
     .sub_header {
         padding-top: 40px;
