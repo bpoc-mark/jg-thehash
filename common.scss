@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.company_profile {
+    background-color: #323C3C;
+
+    // global style
+    .l-wrap {
+        width: 810px;
+        margin: 0 auto;
+        padding-bottom: 105px;
+        border-bottom: 1px solid #fff;
+
+        @media (max-width: 810px) {
+            width: calc(100% - 50px);
+            padding: 0 25px 75px;
+        }
+
+        @media (max-width: 750px) {
+            width: 100%;
+        }
+    }
+
+    .inner_wrapper {
+        width: 480px;
+        margin: 0 auto;
+
+        @media (max-width: 750px) {
+            width: 100%;
+        }
+     }
+
+    .line {
+        width: 1px;
+        height: 60px;
+        background-color: #FFCC00;
+        margin: 0 auto;
+    }
+
+    .company_btn {
+        display: block;
+        text-align: center;
+        color: #FFCC00;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 25px 0 20px 0;
+        padding: 25px 0 20px 0;
+        border: 1px #FFCC00 solid;
+        border-bottom-width: 4px;
+    }
+    // end global style
+
+        .header_title {
+            font-size: 30px;
+            text-align: center;
+            font-weight: 700;
+            line-height: 46px;
+            margin: 0;
+            padding-bottom: 20px;
+            color: #fff;
+        }
+
+        .sub_header {
+            padding-top: 40px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: Noto Sans CJK JP;
+            padding-bottom: 97.51px;
+        }
+
+        .content {
+            color: #fff;
+
+            .text {
+                display: -webkit-box;
+                padding-bottom: 45px;
+
+                @media (max-width: 750px) {
+                    display: block;
+                }
+
+                p:first-child {
+                    width: 125px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    font-family: Noto Sans CJK JP;
+                    color: #FFCC00;
+                }
+
+                p:last-child {
+                    letter-spacing: 0px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-family: Noto Sans CJK JP;
+
+                    @media (max-width: 750px) {
+                        padding-top: 5px;
+                    }
+                }
+
+                &:last-child {
+                    padding-bottom: 65px;
+                }
+
+            }
+        }
+
+}
