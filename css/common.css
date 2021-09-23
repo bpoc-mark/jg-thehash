@@ -52,10 +52,6 @@
   }
 }
 
-.company_profile header_title:nth-child(0) {
-  display: none;
-}
-
 .company_profile .sub_header {
   padding-top: 40px;
   color: #fff;
