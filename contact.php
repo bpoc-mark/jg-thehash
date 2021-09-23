@@ -53,28 +53,30 @@
                 </p>
             </div>
 
-            <form action="#">
+            <form action="#" method="POST">
                 <div class="form-group_1">
                     <div class="row">
                         <label for="">ご用件<span>※必須</span></label>
                     </div>
                     <div class="row">
                         <div class="choose">
-                            <div class="item">
-                                <input type="radio" value="ご予約">
-                                <label for="">ご予約</label>
-                                <div class="check"></div>
-                            </div>
-                            <div class="item">
-                                <input type="radio" value="求人について">
-                                <label for="">求人について</label>
-                                <div class="check"></div>
-                            </div>
-                            <div class="item">
-                                <input type="radio" value="その他お問い合わせ">
-                                <label for="">その他お問い合わせ</label>
-                                <div class="check"></div>
-                            </div>
+                            <ul>
+                                <li>
+                                    <input type="radio" id="ご予約" name="selector">
+                                    <label for="ご予約">ご予約</label>
+                                    <div class="check"></div>
+                                </li>
+                                <li>
+                                    <input type="radio" id="求人について" name="selector">
+                                    <label for="求人について">求人について</label>
+                                    <div class="check"></div>
+                                </li>
+                                <li>
+                                    <input type="radio" id="その他お問い合わせ" name="selector">
+                                    <label for="その他お問い合わせ">その他お問い合わせ</label>
+                                    <div class="check"></div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -123,7 +125,8 @@
                         <label for="">ご住所<span>※必須</span></label>
                     </div>
                     <div class="row">
-                        <input type="text">
+                        <input type="text" placeholder="郵便番号"><br>
+                        <input type="text" placeholder="都道府県・番地">
                     </div>
                 </div>
                 <div class="form-group_1">
@@ -131,15 +134,18 @@
                         <label for="">お問い合わせ内容</label>
                     </div>
                     <div class="row">
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="ご自由にご記入ください"></textarea>
                     </div>
                 </div>
 
                 <div class="agree">
-                    <input type="radio" value="ご予約">
-                    <label for="">下記プライバシーポリシーに同意します。</label>
-                    <div class="check"></div>
-
+                    <ul>
+                        <li>
+                            <input type="radio" id="下記プライバシーポリ シーに同意します。" name="selector">
+                            <label for="下記プライバシーポリ シーに同意します。">下記プライバシーポリ シーに同意します。</label>
+                            <div class="check"></div>
+                        </li>
+                    </ul>
                     <div class="btn">
                         Confirm
                     </div>
@@ -171,7 +177,6 @@
                     <p class="desc">当社は、法令に基づく場合等正当な理由によらない限り、事前に本人の同意を得ることなく、個人情報を第三者に開示・提供することはありません｡</p>
                 </div>
             </div>
-
             <div class="back-to-top">
                 <span></span>
                 <p>Back to top</p>

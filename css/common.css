@@ -15,7 +15,7 @@ body {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 810px) {
   .contact .l-wrap {
     padding: 0 25px 0 25px;
   }
@@ -70,6 +70,45 @@ body {
   padding: 0 0 40px 0;
 }
 
+.contact .form-group_1:nth-of-type(6) .row:last-child input[type="text"] {
+  width: 380px;
+}
+
+@media only screen and (max-width: 810px) {
+  .contact .form-group_1:nth-of-type(6) .row:last-child input[type="text"] {
+    width: 100%;
+  }
+}
+
+.contact .form-group_1:nth-of-type(7) {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contact .form-group_1:nth-of-type(7) .row:first-child {
+  padding: 10px 0 0 0;
+}
+
+.contact .form-group_1:nth-of-type(7) .row:last-child input[type="text"] {
+  width: 180px;
+}
+
+.contact .form-group_1:nth-of-type(7) .row:last-child input[type="text"]:last-child {
+  margin: 10px 0 0 0;
+  width: 100%;
+}
+
+.contact .form-group_1:nth-of-type(8) {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contact .form-group_1:nth-of-type(8) .row:first-child {
+  padding: 10px 0 0 0;
+}
+
 .contact .form-group_1 .row:nth-of-type(1) {
   width: 220px;
   text-align: left;
@@ -94,9 +133,10 @@ body {
   position: relative;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 810px) {
   .contact .form-group_1 .row:nth-of-type(2) {
     padding: 10px 0 0 0;
+    width: 100%;
   }
 }
 
@@ -109,6 +149,79 @@ body {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.contact .form-group_1 .row:nth-of-type(2) .choose ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact .form-group_1 .row:nth-of-type(2) .choose ul li {
+  color: #aaaaaa;
+  display: inline;
+  position: relative;
+  padding: 0 30px 0 0;
+}
+
+.contact .form-group_1 .row:nth-of-type(2) .choose ul li:hover .check {
+  border: 1px solid #ffcc00;
+}
+
+.contact .form-group_1 .row:nth-of-type(2) .choose ul li input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.contact .form-group_1 .row:nth-of-type(2) .choose ul li input[type="radio"]:checked ~ .check {
+  border: 1px solid #ffcc00;
+}
+
+.contact .form-group_1 .row:nth-of-type(2) .choose ul li input[type="radio"]:checked ~ .check::before {
+  background-color: #ffcc00;
+}
+
+.contact .form-group_1 .row:nth-of-type(2) .choose ul li label {
+  display: block;
+  font-size: 18px;
+  font-family: noto-sans-cjk-jp, sans-serif;
+  position: relative;
+  padding-left: 30px;
+  height: 30px;
+  z-index: 9;
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: all 0.25s linear;
+}
+
+.contact .form-group_1 .row:nth-of-type(2) .choose ul li .check {
+  display: block;
+  position: absolute;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  height: 18px;
+  width: 18px;
+  top: 3px;
+  left: 0;
+  z-index: 5;
+  transition: border 0.25s linear;
+  -webkit-transition: border 0.25s linear;
+}
+
+.contact .form-group_1 .row:nth-of-type(2) .choose ul li .check::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  height: 12px;
+  width: 12px;
+  top: 2px;
+  left: 2px;
+  margin: auto;
+  transition: background 0.25s linear;
+  -webkit-transition: background 0.25s linear;
 }
 
 .contact .form-group_1 .row:nth-of-type(2) .choose .item {
@@ -147,7 +260,64 @@ body {
   }
 }
 
-.contact .form-group_1 .row:nth-of-type(2) .choose .item label {
+.contact .form-group_1 .row:nth-of-type(2) input[type="text"] {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+.contact .form-group_1 .row:nth-of-type(2) textarea {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.contact .agree {
+  padding: 10px 0 0 0;
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact .agree ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contact .agree ul li {
+  color: #aaaaaa;
+  display: inline;
+  position: relative;
+  padding: 0 30px 0 0;
+}
+
+.contact .agree ul li:hover .check {
+  border: 1px solid #ffcc00;
+}
+
+.contact .agree ul li input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.contact .agree ul li input[type="radio"]:checked ~ .check {
+  border: 1px solid #ffcc00;
+}
+
+.contact .agree ul li input[type="radio"]:checked ~ .check::before {
+  background-color: #ffcc00;
+}
+
+.contact .agree ul li label {
+  display: block;
   font-size: 18px;
   font-family: noto-sans-cjk-jp, sans-serif;
   position: relative;
@@ -159,7 +329,7 @@ body {
   -webkit-transition: all 0.25s linear;
 }
 
-.contact .form-group_1 .row:nth-of-type(2) .choose .item .check {
+.contact .agree ul li .check {
   display: block;
   position: absolute;
   border: 1px solid #fff;
@@ -173,93 +343,15 @@ body {
   -webkit-transition: border 0.25s linear;
 }
 
-.contact .form-group_1 .row:nth-of-type(2) .choose .item .check::before {
-  display: block;
-  position: absolute;
+.contact .agree ul li .check::before {
   content: "";
-  border-radius: 100%;
-  height: 15px;
-  width: 15px;
-  top: 5px;
-  left: 5px;
-  margin: auto;
-  transition: background 0.25s linear;
-  -webkit-transition: background 0.25s linear;
-}
-
-.contact .form-group_1 .row:nth-of-type(2) input[type="text"] {
-  width: 100%;
-  height: 40px;
-}
-
-.contact .form-group_1 .row:nth-of-type(2) input[type="radio"] {
-  position: absolute;
-  visibility: hidden;
-}
-
-.contact .form-group_1 .row:nth-of-type(2) textarea {
-  width: 100%;
-}
-
-.contact .agree {
-  padding: 10px 0 0 0;
-  position: relative;
-  max-width: 480px;
-  margin: 0 auto;
-}
-
-.contact .agree label {
-  font-size: 18px;
-  font-family: noto-sans-cjk-jp, sans-serif;
-  position: relative;
-  height: 30px;
-  padding: 0 0 0 30px;
-  z-index: 9;
-  cursor: pointer;
-  color: #fff;
-  -webkit-transition: all 0.25s linear;
-}
-
-@media only screen and (max-width: 750px) {
-  .contact .agree label {
-    padding: 0 0 0 20px;
-  }
-}
-
-.contact .agree input[type="radio"] {
-  position: absolute;
-  visibility: hidden;
-}
-
-.contact .agree .check {
   display: block;
   position: absolute;
-  border: 1px solid #fff;
   border-radius: 100%;
-  height: 18px;
-  width: 18px;
-  top: 15px;
-  left: 55px;
-  z-index: 5;
-  transition: border 0.25s linear;
-  -webkit-transition: border 0.25s linear;
-}
-
-@media only screen and (max-width: 750px) {
-  .contact .agree .check {
-    left: 0;
-  }
-}
-
-.contact .agree .check::before {
-  display: block;
-  position: absolute;
-  content: "";
-  border-radius: 100%;
-  height: 15px;
-  width: 15px;
-  top: 5px;
-  left: 5px;
+  height: 12px;
+  width: 12px;
+  top: 2px;
+  left: 2px;
   margin: auto;
   transition: background 0.25s linear;
   -webkit-transition: background 0.25s linear;
