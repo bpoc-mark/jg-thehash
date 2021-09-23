@@ -278,6 +278,10 @@ body {
         position: relative;
         padding: 0 30px 0 0;
 
+        @media only screen and(max-width: 425px) {
+          padding: 0;
+        }
+
         &:hover {
           .check {
             border: 1px solid #ffcc00;

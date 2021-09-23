@@ -299,6 +299,12 @@ body {
   padding: 0 30px 0 0;
 }
 
+@media only screen and (max-width: 425px) {
+  .contact .agree ul li {
+    padding: 0;
+  }
+}
+
 .contact .agree ul li:hover .check {
   border: 1px solid #ffcc00;
 }
