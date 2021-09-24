@@ -34,6 +34,7 @@ body {
   font-family: "Helvetica", sans-serif;
   padding: 0 0 30px 0;
   font-weight: 700;
+  letter-spacing: 10px;
 }
 
 .contact .line {
@@ -481,5 +482,92 @@ body {
   font-family: "Helvetica", sans-serif;
   font-weight: 400;
   padding: 0 0 0 15px;
+}
+
+.thanks .l-wrap {
+  max-width: 810px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 810px) {
+  .thanks .l-wrap {
+    padding: 0 25px 0 25px;
+  }
+}
+
+.thanks .ttl_cont {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 200px 0 0 0;
+}
+
+.thanks__ttl {
+  color: #fff;
+  font-size: 30px;
+  font-family: "Helvetica", sans-serif;
+  padding: 0 0 30px 0;
+  font-weight: 700;
+  letter-spacing: 10px;
+}
+
+.thanks .line {
+  border-right: 1px solid #ffcc00;
+  height: 60px;
+  text-align: center;
+  margin: 0 auto;
+  width: 1px;
+}
+
+.thanks__desc {
+  color: #fff;
+  font-family: noto-sans-cjk-jp, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: left;
+  padding: 40px 0 0 0;
+}
+
+.thanks .img_div {
+  max-width: 810px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 810px) {
+  .thanks .img_div {
+    padding: 0 25px 0 25px;
+  }
+}
+
+.thanks .img_div img {
+  width: 100%;
+}
+
+.thanks .thanks_ttl_cont {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 0 50px 0;
+}
+
+@media only screen and (max-width: 810px) {
+  .thanks .thanks_ttl_cont {
+    padding: 0 25px 0 25px;
+  }
+}
+
+.thanks .thanks_ttl_cont .btn {
+  width: 100%;
+  border: 1px solid #ffcc00;
+  color: #ffcc00;
+  margin: 0 auto;
+  background-color: #323c3c;
+  padding: 25px 0;
+  text-align: center;
+  border-bottom: 4px solid #ffcc00;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 50px 0 0 0;
+  cursor: pointer;
 }
 /*# sourceMappingURL=common.css.map */
