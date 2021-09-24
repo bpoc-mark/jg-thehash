@@ -38,6 +38,15 @@
             s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
+
+
+    <style>
+        .error_msg {
+            color: #ea4335 !important;
+            font-size: 12px;
+            z-index: 100;
+        }
+    </style>
 </head>
 
 <body>
@@ -53,7 +62,7 @@
                 </p>
             </div>
 
-            <form action="#" method="POST">
+            <form action="#form" method="post" enctype="multipart/form-data" novalidate>
                 <div class="form-group_1">
                     <div class="row">
                         <label for="">ご用件<span>※必須</span></label>
@@ -62,46 +71,60 @@
                         <div class="choose">
                             <ul>
                                 <li>
-                                    <input type="radio" id="ご予約" name="selector">
+                                    <input type="radio" id="ご予約" name="selector" value="ご予約">
                                     <label for="ご予約">ご予約</label>
                                     <div class="check"></div>
                                 </li>
                                 <li>
-                                    <input type="radio" id="求人について" name="selector">
+                                    <input type="radio" id="求人について" name="selector" value="求人について">
                                     <label for="求人について">求人について</label>
                                     <div class="check"></div>
                                 </li>
                                 <li>
-                                    <input type="radio" id="その他お問い合わせ" name="selector">
+                                    <input type="radio" id="その他お問い合わせ" name="selector" value="その他お問い合わせ">
                                     <label for="その他お問い合わせ">その他お問い合わせ</label>
                                     <div class="check"></div>
                                 </li>
                             </ul>
                         </div>
+                        <?php if (!empty($error['selector'])) : ?><p class="error_msg">
+                                <?php echo $error['selector']; ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="form-group_1">
                     <div class="row">
-                        <label for="">お名前<span>※必須</span></label>
+                        <label>お名前<span>※必須</span></label>
                     </div>
                     <div class="row">
-                        <input type="text">
+                        <input type="text" name="your_name" value="<?php if (!empty($clean['your_name'])) {
+                                                                        echo $clean['your_name'];
+                                                                    } ?>">
+                        <?php if (!empty($error['your_name'])) : ?><p class="error_msg">
+                                <?php echo $error['your_name']; ?></p>
+                        <?php endif; ?>
                     </div>
+
                 </div>
                 <div class="form-group_1">
                     <div class="row">
                         <label for="">フリガナ</label>
                     </div>
                     <div class="row">
-                        <input type="text">
+                        <input type="text" name="furigana">
                     </div>
                 </div>
                 <div class="form-group_1">
                     <div class="row">
-                        <label for="">メールアドレス<span>※必須</span></label>
+                        <label for="email">メールアドレス<span>※必須</span></label>
                     </div>
                     <div class="row">
-                        <input type="text">
+                        <input type="email" name="email" value="<?php if (!empty($clean['email'])) {
+                                                                    echo $clean['email'];
+                                                                } ?>">
+                        <?php if (!empty($error['email'])) : ?><p class="error_msg">
+                                <?php echo $error['email']; ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="form-group_1">
@@ -109,7 +132,12 @@
                         <label for="">メールアドレス確認用<span>※必須</span></label>
                     </div>
                     <div class="row">
-                        <input type="text">
+                        <input type="email" name="email" value="<?php if (!empty($clean['email'])) {
+                                                                    echo $clean['email'];
+                                                                } ?>">
+                        <?php if (!empty($error['email'])) : ?><p class="error_msg">
+                                <?php echo $error['email']; ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="form-group_1">
@@ -117,7 +145,12 @@
                         <label for="">電話番号<span>※必須</span></label>
                     </div>
                     <div class="row">
-                        <input type="text">
+                        <input type="text" name="tel" value="<?php if (!empty($clean['tel'])) {
+                                                                    echo $clean['tel'];
+                                                                } ?>">
+                        <?php if (!empty($error['tel'])) : ?><p class="error_msg">
+                                <?php echo $error['tel']; ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="form-group_1">
@@ -125,8 +158,19 @@
                         <label for="">ご住所<span>※必須</span></label>
                     </div>
                     <div class="row">
-                        <input type="text" placeholder="郵便番号"><br>
-                        <input type="text" placeholder="都道府県・番地">
+                        <input type="text" placeholder="郵便番号" name="postal" value="<?php if (!empty($clean['postal'])) {
+                                                                                        echo $clean['postal'];
+                                                                                    } ?>"><br>
+                        <?php if (!empty($error['postal'])) : ?><p class="error_msg">
+                                <?php echo $error['postal']; ?></p>
+                        <?php endif; ?>
+                        <input type="text" placeholder="都道府県・番地" name="address" value="<?php if (!empty($clean['address'])) {
+                                                                                            echo $clean['address'];
+                                                                                        } ?>" style="width: 100% !important; margin: 10px 0 0 0 !important;">
+
+                        <?php if (!empty($error['address'])) : ?><p class="error_msg">
+                                <?php echo $error['address']; ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="form-group_1">
@@ -134,21 +178,24 @@
                         <label for="">お問い合わせ内容</label>
                     </div>
                     <div class="row">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="ご自由にご記入ください"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="ご自由にご記入ください" value="<?php if (!empty($clean['inquiry'])) {
+                                                                                                            echo $clean['inquiry'];
+                                                                                                        } ?>"></textarea>
                     </div>
                 </div>
 
                 <div class="agree">
                     <ul>
                         <li>
-                            <input type="radio" id="下記プライバシーポリ シーに同意します。" name="selector">
+                            <input type="radio" id="下記プライバシーポリ シーに同意します。" name="agreement" value="下記プライバシーポリ シーに同意します。">
                             <label for="下記プライバシーポリ シーに同意します。">下記プライバシーポリ シーに同意します。</label>
                             <div class="check"></div>
                         </li>
+                        <?php if (!empty($error['agreement'])) : ?><p class="error_msg">
+                                <?php echo $error['agreement']; ?></p>
+                        <?php endif; ?>
                     </ul>
-                    <div class="btn">
-                        Confirm
-                    </div>
+                    <input type="submit" class="btn" name="btn_submit" value="Confirm">
                 </div>
             </form>
         </div>

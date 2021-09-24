@@ -6,6 +6,7 @@
 
 body {
   background-color: #323c3c;
+  color: #ffff;
 }
 
 .contact {
@@ -85,8 +86,8 @@ body {
             width: 180px;
 
             &:last-child {
-              margin: 10px 0 0 0;
-              width: 100%;
+              margin: 10px 0 0 0 !important;
+              width: 100% !important;
             }
           }
         }
@@ -126,6 +127,13 @@ body {
         width: 590px;
         text-align: left;
         position: relative;
+
+        .confirm {
+          font-size: 16px;
+          color: #fff;
+          font-family: noto-sans-cjk-jp, sans-serif;
+          font-weight: 500;
+        }
 
         @media only screen and(max-width: 810px) {
           padding: 10px 0 0 0;
@@ -197,8 +205,8 @@ body {
                   display: block;
                   position: absolute;
                   border-radius: 100%;
-                  height: 12px;
-                  width: 12px;
+                  height: 11px;
+                  width: 11px;
                   top: 2px;
                   left: 2px;
                   margin: auto;
@@ -244,7 +252,8 @@ body {
           }
         }
 
-        input[type="text"] {
+        input[type="text"],
+        input[type="email"] {
           width: 100%;
           height: 40px;
           font-size: 16px;
@@ -261,7 +270,7 @@ body {
   }
 
   .agree {
-    padding: 10px 0 0 0;
+    padding: 10px 0 35px 0;
     position: relative;
     max-width: 480px;
     margin: 0 auto;
@@ -332,9 +341,9 @@ body {
             display: block;
             position: absolute;
             border-radius: 100%;
-            height: 12px;
-            width: 12px;
-            top: 2px;
+            height: 11px;
+            width: 11px;
+            top: 3px;
             left: 2px;
             margin: auto;
             transition: background 0.25s linear;
@@ -349,6 +358,7 @@ body {
       border: 1px solid #ffcc00;
       color: #ffcc00;
       margin: 0 auto;
+      background-color: #323c3c;
       padding: 25px 0;
       text-align: center;
       border-bottom: 4px solid #ffcc00;
@@ -356,13 +366,14 @@ body {
       font-weight: 400;
       font-size: 18px;
       margin: 50px 0 0 0;
+      cursor: pointer;
     }
   }
 }
 
 .privacy {
   text-align: center;
-  padding: 135px 0 0 0;
+  padding: 100px 0 0 0;
 
   .l-wrap {
     max-width: 810px;
