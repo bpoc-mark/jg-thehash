@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: #323c3c;
   color: #ffff;
@@ -138,6 +142,8 @@ body {
   border: 1px #ffcc00 solid;
   border-bottom-width: 4px;
   text-decoration: none;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 400;
 }
 
 .company_profile .bottom_line {
@@ -456,6 +462,8 @@ body {
   border-bottom: 4px solid #ffcc00;
   font-weight: 400;
   font-size: 18px;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 400;
 }
 
 @media (max-width: 810px) {

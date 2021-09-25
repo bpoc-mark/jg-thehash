@@ -224,10 +224,12 @@
                     <p class="desc">当社は、法令に基づく場合等正当な理由によらない限り、事前に本人の同意を得ることなく、個人情報を第三者に開示・提供することはありません｡</p>
                 </div>
             </div>
-            <div class="back-to-top">
-                <span></span>
-                <p>Back to top</p>
-            </div>
+            <a href="#">
+                <div class="back-to-top">
+                    <span></span>
+                    <p>Back to top</p>
+                </div>
+            </a>
         </div>
     </div>
 </body>

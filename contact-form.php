@@ -56,7 +56,7 @@ if (!empty($clean['btn_submit'])) {
             mb_internal_encoding("UTF-8");
 
             // // 件名を設定
-            $auto_reply_subject = '【資料請求】自動返信メール｜Locaop';
+            $auto_reply_subject = '【資料請求】自動返信メール｜THEHASH';
             // // 本文を設定
             $auto_reply_text .=  $clean['your_name'] . "様\n\n";
             $auto_reply_text .= "この度は、お問い合わせ頂きありがとうございます。\n";
@@ -65,9 +65,9 @@ if (!empty($clean['btn_submit'])) {
             $auto_reply_text .= "今しばらくお待ち頂きますようお願い申し上げます。\n\n";
             $auto_reply_text .= "-----以下送信内容-----\n";
             // $auto_reply_text .= "お問い合わせ内容: " . $_POST['customer_attr'][0] . " - " . $_POST['customer_attr'][1] . " - " . $_POST['customer_attr'][2] . " - " . $_POST['customer_attr'][3] . "\n";
+            $auto_reply_text .= "ご用件: " . $clean['selector'] . "\n";
             $auto_reply_text .= "お名前: " . $clean['your_name'] . "\n";
             $auto_reply_text .= "メールアドレス: " . $clean['email'] . "\n";
-            $auto_reply_text .= "会社名: " . $clean['company_name'] . "\n";
             $auto_reply_text .= "電話番号: " . $clean['tel'] . "\n";
             // $auto_reply_text .= "お問い合わせ内容: " . nl2br($clean['contents']) . "\n";
             $auto_reply_text .= "プライバシーポリシー: 同意済み\n";
@@ -79,14 +79,14 @@ if (!empty($clean['btn_submit'])) {
             $autobody .= $auto_reply_text . "\n";
 
             // // 運営側へ送るメールの件名
-            $admin_reply_subject = "jg-thehash";
+            $admin_reply_subject = "THEHASH";
             // // 本文を設定;
-            $admin_reply_text .= "JG-THEHASH\n";
+            $admin_reply_text .= "THEHASH\n";
             $admin_reply_text .= "-----以下送信内容--------\n";
             // $admin_reply_text .= "お問い合わせ内容: " . $_POST['customer_attr'][0] . " - " . $_POST['customer_attr'][1] . " - " . $_POST['customer_attr'][2] . " - " . $_POST['customer_attr'][3] . "\n";
+            $admin_reply_text .= "ご用件: " . $clean['selector'] . "\n";
             $admin_reply_text .= "お名前: " . $clean['your_name'] . "\n";
             $admin_reply_text .= "メールアドレス: " . $clean['email'] . "\n";
-            $admin_reply_text .= "会社名: " . $clean['company_name'] . "\n";
             $admin_reply_text .= "電話番号: " . $clean['tel'] . "\n";
             // $admin_reply_text .= "お問い合わせ内容: " . nl2br($clean['contents']) . "\n";
             $admin_reply_text .= "プライバシーポリシー: 同意済み\n";
@@ -117,8 +117,8 @@ if (!empty($clean['btn_submit'])) {
                 $mail->CharSet = 'UTF-8';
 
                 //Recipients
-                $mail->setFrom('gregarsua@bpoc.co.jp', 'jg-thehash');
-                $mail->addReplyTo('gregarsua@bpoc.co.jp', 'jg-thehash');
+                $mail->setFrom('gregarsua@bpoc.co.jp', 'THEHASH');
+                $mail->addReplyTo('gregarsua@bpoc.co.jp', 'THEHASH');
 
                 //Content
                 $mail->addAddress($clean['email']);     //Add a recipient
@@ -160,7 +160,7 @@ function validation($data)
     $error = array();
 
     if (empty($_POST['selector'])) {
-        $error['selector'] = "「お客様属性」は入力必須項目です。";
+        $error['selector'] = "「ご用件」は入力必須項目です。";
     }
 
     // 氏名のバリデーション
@@ -185,13 +185,13 @@ function validation($data)
 
     // 氏名のバリデーション
     if (empty($data['address'])) {
-        $error['address'] = "「ご住所」は入力必須項目です。";
+        $error['address'] = "「都道府県・番地」は入力必須項目です。";
     } elseif (20 < mb_strlen($data['address'])) {
         $error['address'] = "20文字以内で入力してください。";
     }
 
     if (empty($data['postal'])) {
-        $error['postal'] = "「ご住所」は入力必須項目です。";
+        $error['postal'] = "「郵便番号」は入力必須項目です。";
     } elseif (20 < mb_strlen($data['postal'])) {
         $error['postal'] = "20文字以内で入力してください。";
     }
