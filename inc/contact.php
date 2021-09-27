@@ -111,7 +111,9 @@
                         <label for="">フリガナ</label>
                     </div>
                     <div class="row">
-                        <input type="text" name="furigana">
+                        <input type="text" name="furigana" value="<?php if (!empty($clean['your_name'])) {
+                                                                        echo $clean['your_name'];
+                                                                    } ?>">
                     </div>
                 </div>
                 <div class="form-group_1">
@@ -132,11 +134,11 @@
                         <label for="">メールアドレス確認用<span>※必須</span></label>
                     </div>
                     <div class="row">
-                        <input type="email" name="email" value="<?php if (!empty($clean['email'])) {
-                                                                    echo $clean['email'];
-                                                                } ?>">
-                        <?php if (!empty($error['email'])) : ?><p class="error_msg">
-                                <?php echo $error['email']; ?></p>
+                        <input type="email" name="confirm_email" value="<?php if (!empty($clean['confirm_email'])) {
+                                                                            echo $clean['confirm_email'];
+                                                                        } ?>">
+                        <?php if (!empty($error['confirm_email'])) : ?><p class="error_msg">
+                                <?php echo $error['confirm_email']; ?></p>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -178,9 +180,10 @@
                         <label for="">お問い合わせ内容</label>
                     </div>
                     <div class="row">
-                        <textarea name="inquiry" id="" cols="30" rows="10" placeholder="ご自由にご記入ください" value="<?php if (!empty($clean['inquiry'])) {
-                                                                                                                echo $clean['inquiry'];
-                                                                                                            } ?>"></textarea>
+                        <textarea name="inquiry" id="" cols="30" rows="10" value="<?php if (!empty($clean['inquiry'])) {
+                                                                                        echo $clean['inquiry'];
+                                                                                    } ?>">
+                                                                                                            </textarea>
                     </div>
                 </div>
 

@@ -209,6 +209,12 @@ function validation($data)
         $error['email'] = "正しい形式で入力してください。";
     }
 
+    if (empty($data['confirm_email'])) {
+        $error['confirm_email'] = "「メールアドレス」は入力必須項目です。";
+    } elseif ($data['email'] !== $data['confirm_email']) {
+        $error['confirm_email'] = "Email Adress must be the same";
+    }
+
     // 氏名のバリデーション
     if (empty($data['address'])) {
         $error['address'] = "「都道府県・番地」は入力必須項目です。";
