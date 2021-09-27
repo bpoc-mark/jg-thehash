@@ -334,7 +334,7 @@ body {
           text-align: center;
           font-family: noto-sans-cjk-jp, sans-serif;
           font-weight: 500;
-          color: #323C3C;
+          color: #323c3c;
 
           @media (max-width: 750px) {
             width: 100%;
@@ -677,6 +677,7 @@ body {
           width: 100%;
           font-size: 16px;
           padding: 10px;
+          white-space: pre;
         }
       }
     }
