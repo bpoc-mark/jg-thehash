@@ -144,36 +144,6 @@
             </form>
         </div>
     </div>
-
-    <!-- <div class="privacy">
-        <div class="l-wrap">
-            <h1 class="privacy__ttl">Privacy policy</h1>
-            <div class="line"></div>
-
-            <div class="privacy__content">
-                <div class="privacy__content--item">
-                    <p class="title">個人情報保護について</p>
-                    <p class="desc">個人情報保護の重要性を認識し、適切に利用し、保護することが社会的責任であると考え、 個人情報の保護に努めることをお約束いたします。</p>
-                </div>
-                <div class="privacy__content--item">
-                    <p class="title">個人情報の定義</p>
-                    <p class="desc">個人情報とは、個人に関する情報であり、氏名、生年月日、性別、電話番号、電子メールアドレス、職業、勤務先等、特定の個人を識別し得る情報をいいます。</p>
-                </div>
-                <div class="privacy__content--item">
-                    <p class="title">個人情報の収集・利用</p>
-                    <p class="desc">当社は、以下の目的のため、その範囲内においてのみ、個人情報を収集・利用いたします。当社による個人情報の収集・利用は、お客様の自発的な提供によるものであり、お客様が個人情報を提供された場合は、当社が本方針に則って個人情報を利用することをお客様が 許諾したものとします。お客様に有益かつ必要と思われる情報の提供業務遂行上で必要となる当社からの問い合わせ、確認、およびサービス向上のための意見収集、各種のお問い合わせ対応に使用いたします。</p>
-                </div>
-                <div class="privacy__content--item">
-                    <p class="title">個人情報の第三者提供</p>
-                    <p class="desc">当社は、法令に基づく場合等正当な理由によらない限り、事前に本人の同意を得ることなく、個人情報を第三者に開示・提供することはありません｡</p>
-                </div>
-            </div>
-            <div class="back-to-top">
-                <span></span>
-                <p>Back to top</p>
-            </div>
-        </div>
-    </div> -->
 </body>
 
 </html>

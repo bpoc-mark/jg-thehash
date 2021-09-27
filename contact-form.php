@@ -67,8 +67,12 @@ if (!empty($clean['btn_submit'])) {
             // $auto_reply_text .= "お問い合わせ内容: " . $_POST['customer_attr'][0] . " - " . $_POST['customer_attr'][1] . " - " . $_POST['customer_attr'][2] . " - " . $_POST['customer_attr'][3] . "\n";
             $auto_reply_text .= "ご用件: " . $clean['selector'] . "\n";
             $auto_reply_text .= "お名前: " . $clean['your_name'] . "\n";
+            $auto_reply_text .= "フリガナ: " . $clean['furigana'] . "\n";
             $auto_reply_text .= "メールアドレス: " . $clean['email'] . "\n";
             $auto_reply_text .= "電話番号: " . $clean['tel'] . "\n";
+            $auto_reply_text .= "郵便番号: " . $clean['postal'] . "\n";
+            $auto_reply_text .= "都道府県・番地: " . $clean['address'] . "\n";
+            $auto_reply_text .= "お問い合わせ内容: " . $clean['inquiry'] . "\n";
             // $auto_reply_text .= "お問い合わせ内容: " . nl2br($clean['contents']) . "\n";
             $auto_reply_text .= "プライバシーポリシー: 同意済み\n";
             $auto_reply_text .= "---------------------------- \n";
@@ -86,8 +90,12 @@ if (!empty($clean['btn_submit'])) {
             // $admin_reply_text .= "お問い合わせ内容: " . $_POST['customer_attr'][0] . " - " . $_POST['customer_attr'][1] . " - " . $_POST['customer_attr'][2] . " - " . $_POST['customer_attr'][3] . "\n";
             $admin_reply_text .= "ご用件: " . $clean['selector'] . "\n";
             $admin_reply_text .= "お名前: " . $clean['your_name'] . "\n";
+            $admin_reply_text .= "フリガナ: " . $clean['furigana'] . "\n";
             $admin_reply_text .= "メールアドレス: " . $clean['email'] . "\n";
             $admin_reply_text .= "電話番号: " . $clean['tel'] . "\n";
+            $admin_reply_text .= "郵便番号: " . $clean['postal'] . "\n";
+            $admin_reply_text .= "都道府県・番地: " . $clean['address'] . "\n";
+            $admin_reply_text .= "お問い合わせ内容: " . $clean['inquiry'] . "\n";
             // $admin_reply_text .= "お問い合わせ内容: " . nl2br($clean['contents']) . "\n";
             $admin_reply_text .= "プライバシーポリシー: 同意済み\n";
             $admin_reply_text .= "---------------------------- \n\n";
@@ -106,7 +114,7 @@ if (!empty($clean['btn_submit'])) {
 
             try {
                 //Server settings
-                $mail->SMTPDebug = 3;                      //Enable verbose debug output
+                // $mail->SMTPDebug = false;                      //Enable verbose debug output
                 $mail->isSMTP();                                            //Send using SMTP
                 $mail->Host       = $host;                         //Set the SMTP server to send through
                 $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
@@ -130,7 +138,6 @@ if (!empty($clean['btn_submit'])) {
 
                 if ($mail->send()) {
                     if (empty($mail->ClearAllRecipients())) {
-                        echo "true";
                         //Content
                         $mail->addAddress('gregarsua@bpoc.co.jp');             //Add a recipient
                         $mail->isHTML(false);
@@ -141,7 +148,7 @@ if (!empty($clean['btn_submit'])) {
 
                         // $url = "https://locaop.hipetest.com/thanks.php";
                         // header('Location: ' . $url, true, 301);
-                        require_once($_SERVER['DOCUMENT_ROOT'] . "/inc/confirm.php");
+                        require_once($_SERVER['DOCUMENT_ROOT'] . "/inc/thanks.php");
                     }
                 }
             } catch (phpmailerException $e) {
@@ -235,7 +242,7 @@ function validation($data)
     // サンクスページへリダイレクト
     // $url = "https://locaop.hipetest.com/thanks.php";
     // header('Location: ' . $url, true, 301);
-    // require_once($_SERVER['DOCUMENT_ROOT'] . "/thanks.html");
+    require_once(dirname(__FILE__) . "/inc/thanks.php");
     exit;
 ?>
 <?php else :
