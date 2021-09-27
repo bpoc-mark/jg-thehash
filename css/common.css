@@ -499,6 +499,12 @@ body {
   letter-spacing: 10px;
 }
 
+@media only screen and (max-width: 425px) {
+  .contact__ttl {
+    font-size: 7vw;
+  }
+}
+
 .contact .line {
   border-right: 1px solid #ffcc00;
   height: 60px;
@@ -817,7 +823,8 @@ body {
 
 @media only screen and (max-width: 750px) {
   .contact .agree ul li label {
-    font-size: 3.5vw;
+    font-size: 4vw;
+    padding-left: 25px;
   }
 }
 
