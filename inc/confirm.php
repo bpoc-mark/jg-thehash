@@ -101,7 +101,7 @@
                         <label for="">メールアドレス確認用<span>※必須</span></label>
                     </div>
                     <div class="row">
-                        <p class="confirm"><?php echo $clean['email']; ?></p>
+                        <p class="confirm"><?php echo $clean['confirm_email']; ?></p>
                     </div>
                 </div>
                 <div class="form-group_1">
@@ -134,6 +134,7 @@
                 <input type="hidden" name="your_name" value="<?php echo $clean['your_name']; ?>">
                 <input type="hidden" name="furigana" value="<?php echo $clean['furigana']; ?>">
                 <input type="hidden" name="email" value="<?php echo $clean['email']; ?>">
+                <input type="hidden" name="confirm_email" value="<?php echo $clean['confirm_email']; ?>">
                 <input type="hidden" name="tel" value="<?php echo $clean['tel']; ?>">
                 <input type="hidden" name="postal" value="<?php echo $clean['postal']; ?>">
                 <input type="hidden" name="address" value="<?php echo $clean['address']; ?>">

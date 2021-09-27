@@ -111,8 +111,8 @@
                         <label for="">フリガナ</label>
                     </div>
                     <div class="row">
-                        <input type="text" name="furigana" value="<?php if (!empty($clean['your_name'])) {
-                                                                        echo $clean['your_name'];
+                        <input type="text" name="furigana" value="<?php if (!empty($clean['furigana'])) {
+                                                                        echo $clean['furigana'];
                                                                     } ?>">
                     </div>
                 </div>
@@ -160,13 +160,13 @@
                         <label for="">ご住所<span>※必須</span></label>
                     </div>
                     <div class="row">
-                        <input type="text" placeholder="郵便番号" name="postal" value="<?php if (!empty($clean['postal'])) {
+                        <input type="text" class="zip_s" placeholder="郵便番号" name="postal" value="<?php if (!empty($clean['postal'])) {
                                                                                         echo $clean['postal'];
                                                                                     } ?>"><br>
                         <?php if (!empty($error['postal'])) : ?><p class="error_msg">
                                 <?php echo $error['postal']; ?></p>
                         <?php endif; ?>
-                        <input type="text" placeholder="都道府県・番地" name="address" value="<?php if (!empty($clean['address'])) {
+                        <input type="text" class="address_s" placeholder="都道府県・番地" name="address" value="<?php if (!empty($clean['address'])) {
                                                                                             echo $clean['address'];
                                                                                         } ?>" style="width: 100% !important; margin: 10px 0 0 0 !important;">
 
@@ -180,10 +180,9 @@
                         <label for="">お問い合わせ内容</label>
                     </div>
                     <div class="row">
-                        <textarea name="inquiry" id="" cols="30" rows="10" placeholder="ご自由にご記入ください" value="<?php if (!empty($clean['inquiry'])) {
+                        <textarea name="inquiry" id="" cols="30" rows="10" placeholder="ご自由にご記入ください"><?php if (!empty($clean['inquiry'])) {
                                                                                                                 echo $clean['inquiry'];
-                                                                                                            } ?>">
-                                                                                                            </textarea>
+                                                                                                            } ?></textarea>
                     </div>
                 </div>
 
@@ -235,6 +234,19 @@
             </a>
         </div>
     </div>
+
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script>
+        $('.zip_s').on('keyup', function() {
+                if($(this).val() !== ''){
+                  AjaxZip3.zip2addr('postal', '', 'address', 'address');
+                } 
+                if($(this).val() === ''){
+                  $('.address_s').val('')
+                }
+            });
+    </script>
 </body>
 
 </html>

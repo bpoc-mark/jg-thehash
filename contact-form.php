@@ -26,6 +26,7 @@ $clean['tel'] = mb_convert_kana($clean['tel'], "n");
 $clean['email'] = str_replace(array(" ", "　"), "", $clean['email']);
 $clean['email'] = mb_convert_kana($clean['email'], "askhc");
 
+
 if (!empty($clean['btn_confirm'])) {
     $error = validation($clean);
 
