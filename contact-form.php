@@ -26,8 +26,27 @@ $clean['tel'] = mb_convert_kana($clean['tel'], "n");
 $clean['email'] = str_replace(array(" ", "　"), "", $clean['email']);
 $clean['email'] = mb_convert_kana($clean['email'], "askhc");
 
+if (!empty($clean['btn_confirm'])) {
+    $error = validation($clean);
 
-if (!empty($clean['btn_submit'])) {
+    if (empty($error)) {
+
+        // if (empty($clean['date2'])) {
+        //     $clean['date2'] = "なし";
+        //     $clean['time2'] = "なし";
+        // }
+
+        // if (empty($clean['date3'])) {
+        //     $clean['date3'] = "なし";
+        //     $clean['time3'] = "なし";
+        // }
+
+        $page_flag = 1;
+        // セッションの書き込み
+        session_start();
+        $_SESSION['page'] = true;
+    }
+} elseif (!empty($clean['btn_submit'])) {
     $error = validation($clean);
 
     if (empty($error)) {

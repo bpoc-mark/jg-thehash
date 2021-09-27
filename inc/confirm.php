@@ -118,7 +118,7 @@
                     </div>
                     <div class="row">
                         <p class="confirm"><?php echo $clean['postal']; ?></p><br>
-                        <p class="confirm"><?php echo $clean['address']; ?></p>
+                        <p class="confirm"><?php echo $clean['inquiry']; ?></p>
                     </div>
                 </div>
                 <div class="form-group_1">
@@ -129,6 +129,16 @@
                         <p class="confirm"><?php echo $clean['inquiry']; ?></p>
                     </div>
                 </div>
+
+                <input type="hidden" name="selector" value="<?php echo $clean['selector']; ?>">
+                <input type="hidden" name="your_name" value="<?php echo $clean['your_name']; ?>">
+                <input type="hidden" name="furigana" value="<?php echo $clean['furigana']; ?>">
+                <input type="hidden" name="email" value="<?php echo $clean['email']; ?>">
+                <input type="hidden" name="tel" value="<?php echo $clean['tel']; ?>">
+                <input type="hidden" name="postal" value="<?php echo $clean['postal']; ?>">
+                <input type="hidden" name="address" value="<?php echo $clean['address']; ?>">
+                <input type="hidden" name="inquiry" value="<?php echo $clean['inquiry']; ?>">
+
 
                 <div class="agree">
                     <ul>
