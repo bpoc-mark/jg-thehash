@@ -178,9 +178,9 @@
                         <label for="">お問い合わせ内容</label>
                     </div>
                     <div class="row">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="ご自由にご記入ください" value="<?php if (!empty($clean['inquiry'])) {
-                                                                                                            echo $clean['inquiry'];
-                                                                                                        } ?>"></textarea>
+                        <textarea name="inquiry" id="" cols="30" rows="10" placeholder="ご自由にご記入ください" value="<?php if (!empty($clean['inquiry'])) {
+                                                                                                                echo $clean['inquiry'];
+                                                                                                            } ?>"></textarea>
                     </div>
                 </div>
 
@@ -195,7 +195,7 @@
                                 <?php echo $error['agreement']; ?></p>
                         <?php endif; ?>
                     </ul>
-                    <input type="submit" class="btn" name="btn_submit" value="Confirm">
+                    <input type="submit" class="btn" name="btn_confirm" value="Confirm">
                 </div>
             </form>
         </div>
