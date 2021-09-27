@@ -167,8 +167,8 @@ if (!empty($clean['btn_confirm'])) {
                         $mail->send();
 
                         // $url = "https://locaop.hipetest.com/thanks.php";
-                        // header('Location: ' . $url, true, 301);
-                        require_once($_SERVER['DOCUMENT_ROOT'] . "/inc/thanks.php");
+                        header('Location: thanks.php' . $url, true, 301);
+                        // require_once($_SERVER['DOCUMENT_ROOT'] . "/inc/thanks.php");
                     }
                 }
             } catch (phpmailerException $e) {
