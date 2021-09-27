@@ -282,7 +282,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 385px;
+  width: 420px;
   margin: 0 auto;
   padding-bottom: 48px;
 }
@@ -311,8 +311,8 @@ body {
 
 .company_profile .franchise .pdf p {
   color: #fff;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 700;
   font-family: noto-sans-cjk-jp, sans-serif;
   letter-spacing: 3px;
 }
