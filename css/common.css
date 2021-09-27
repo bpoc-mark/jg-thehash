@@ -225,6 +225,7 @@ body {
   border-bottom-width: 4px;
   padding: 15px 0;
   position: relative;
+  font-family: ten-mincho, serif;
 }
 
 .company_profile .business_content .company_btn img {
@@ -830,8 +831,13 @@ body {
 
 @media only screen and (max-width: 750px) {
   .contact .agree ul li label {
-    font-size: 4vw;
     padding-left: 25px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .contact .agree ul li label {
+    font-size: 3.8vw;
   }
 }
 

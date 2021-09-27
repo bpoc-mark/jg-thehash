@@ -193,6 +193,7 @@ body {
       border-bottom-width: 4px;
       padding: 15px 0;
       position: relative;
+      font-family: ten-mincho, serif;
 
       img {
         width: 130.5676px;
@@ -739,8 +740,12 @@ body {
           -webkit-transition: all 0.25s linear;
 
           @media only screen and(max-width: 750px) {
-            font-size: 4vw;
+            // font-size: 4vw;
             padding-left: 25px;
+          }
+
+          @media only screen and(max-width: 450px) {
+            font-size: 3.8vw;
           }
         }
 
