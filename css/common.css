@@ -32,6 +32,7 @@
   margin-bottom: 30px;
   text-align: center;
   color: #fff;
+  letter-spacing: 4px;
 }
 
 .staff .container .line {
@@ -129,6 +130,7 @@
   margin: 0 auto;
   border: 1px solid #FFCC00;
   border-bottom: 4px solid #FFCC00;
+  letter-spacing: 4px;
 }
 
 .staff .container .back_to_top {
