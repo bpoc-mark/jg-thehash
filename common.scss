@@ -16,10 +16,10 @@ body {
 .back_to_top {
   margin-top: 80px;
   text-align: right;
-  margin-right: 20px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  font-family: "Helvetica", sans-serif;
   @media (max-width: 750px) {
     margin-top: 33px;
   }
@@ -66,7 +66,7 @@ body {
   }
 
   .inner_wrapper {
-    width: 480px;
+    width: 500px;
     margin: 0 auto;
     position: relative;
 
@@ -86,7 +86,7 @@ body {
     padding-top: 122px;
     font-family: "Helvetica", sans-serif;
     font-weight: 700;
-    letter-spacing: 10px;
+    letter-spacing: 7px;
 
     @media (max-width: 750px) {
       padding-top: 82px;
@@ -101,6 +101,8 @@ body {
     font-family: noto-sans-cjk-jp, sans-serif;
     padding-bottom: 97.51px;
     text-align: justify;
+    letter-spacing: -1.2px;
+    line-height: 32px;
   }
 
   .line {
@@ -122,18 +124,19 @@ body {
     text-decoration: none;
     font-family: "Helvetica", sans-serif;
     font-weight: 400;
+    letter-spacing: 4px;
   }
 
   .bottom_line {
     height: 1px;
-    width: 100%;
+    width: 100vw;
     background-color: #fff;
     margin-top: 107px;
 
     @media (max-width: 750px) {
       position: relative;
       margin-left: -30vh;
-      width: 150vw;
+      width: 200vw;
       margin-top: 70px;
     }
   }
@@ -297,6 +300,7 @@ body {
       font-family: "Helvetica", sans-serif;
       font-weight: 700;
       letter-spacing: 10px;
+      padding: 0 25px;
     }
     .line {
       height: 60px;
@@ -329,10 +333,12 @@ body {
           text-align: center;
           font-family: noto-sans-cjk-jp, sans-serif;
           font-weight: 500;
+          color: #323C3C;
 
           @media (max-width: 750px) {
             width: 100%;
             padding: 10px 10px;
+            font-size: 4vw;
           }
         }
         p:nth-child(2) {
@@ -349,12 +355,12 @@ body {
           }
         }
         p:nth-child(3) {
-          text-align: left;
           color: #fff;
           line-height: 32px;
           margin-bottom: 132px;
           font-family: noto-sans-cjk-jp, sans-serif;
           font-weight: 400;
+          text-align: justify;
         }
       }
     }
@@ -397,6 +403,7 @@ body {
           font-size: 18px;
           font-family: "Helvetica", sans-serif;
           font-weight: 400;
+          letter-spacing: 4px;
         }
       }
     }
@@ -781,6 +788,7 @@ body {
       font-size: 18px;
       margin: 50px 0 0 0;
       cursor: pointer;
+      letter-spacing: 4px;
     }
   }
 }
@@ -871,6 +879,7 @@ body {
       font-family: "Helvetica", sans-serif;
       font-weight: 400;
       padding: 0 0 0 15px;
+      letter-spacing: 2px;
     }
   }
 }
