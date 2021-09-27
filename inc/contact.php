@@ -9,15 +9,35 @@
     <title>Document</title>
 
     <script>
-  (function(d) {
-    var config = {
-      kitId: 'utn7uue',
-      scriptTimeout: 3000,
-      async: true
-    },
-    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-  })(document);
-</script>
+        (function(d) {
+            var config = {
+                    kitId: 'utn7uue',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement,
+                t = setTimeout(function() {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function() {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
 
 
     <style>
@@ -91,7 +111,9 @@
                         <label for="">フリガナ</label>
                     </div>
                     <div class="row">
-                        <input type="text" name="furigana">
+                        <input type="text" name="furigana" value="<?php if (!empty($clean['your_name'])) {
+                                                                        echo $clean['your_name'];
+                                                                    } ?>">
                     </div>
                 </div>
                 <div class="form-group_1">
@@ -112,11 +134,11 @@
                         <label for="">メールアドレス確認用<span>※必須</span></label>
                     </div>
                     <div class="row">
-                        <input type="email" name="email" value="<?php if (!empty($clean['email'])) {
-                                                                    echo $clean['email'];
-                                                                } ?>">
-                        <?php if (!empty($error['email'])) : ?><p class="error_msg">
-                                <?php echo $error['email']; ?></p>
+                        <input type="email" name="confirm_email" value="<?php if (!empty($clean['confirm_email'])) {
+                                                                            echo $clean['confirm_email'];
+                                                                        } ?>">
+                        <?php if (!empty($error['confirm_email'])) : ?><p class="error_msg">
+                                <?php echo $error['confirm_email']; ?></p>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -160,7 +182,8 @@
                     <div class="row">
                         <textarea name="inquiry" id="" cols="30" rows="10" placeholder="ご自由にご記入ください" value="<?php if (!empty($clean['inquiry'])) {
                                                                                                                 echo $clean['inquiry'];
-                                                                                                            } ?>"></textarea>
+                                                                                                            } ?>">
+                                                                                                            </textarea>
                     </div>
                 </div>
 
