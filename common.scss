@@ -682,6 +682,10 @@ body {
       flex-wrap: wrap;
       justify-content: flex-end;
 
+      @media only screen and(max-width: 810px) {
+        justify-content: flex-start;
+      }
+
       li {
         color: #aaaaaa;
         display: inline;
@@ -722,6 +726,10 @@ body {
           cursor: pointer;
           color: #fff;
           -webkit-transition: all 0.25s linear;
+
+          @media only screen and(max-width: 750px) {
+            font-size: 3.5vw;
+          }
         }
 
         .check {
@@ -731,7 +739,7 @@ body {
           border-radius: 100%;
           height: 18px;
           width: 18px;
-          top: 7px;
+          top: 3px;
           left: 0;
           z-index: 5;
           transition: border 0.25s linear;

@@ -764,6 +764,14 @@ body {
           justify-content: flex-end;
 }
 
+@media only screen and (max-width: 810px) {
+  .contact .agree ul {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .contact .agree ul li {
   color: #aaaaaa;
   display: inline;
@@ -807,6 +815,12 @@ body {
   -webkit-transition: all 0.25s linear;
 }
 
+@media only screen and (max-width: 750px) {
+  .contact .agree ul li label {
+    font-size: 3.5vw;
+  }
+}
+
 .contact .agree ul li .check {
   display: block;
   position: absolute;
@@ -814,7 +828,7 @@ body {
   border-radius: 100%;
   height: 18px;
   width: 18px;
-  top: 7px;
+  top: 3px;
   left: 0;
   z-index: 5;
   transition: border 0.25s linear;
