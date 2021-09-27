@@ -127,6 +127,12 @@ body {
   line-height: 32px;
 }
 
+@media (max-width: 750px) {
+  .company_profile .sub_header.content {
+    padding-bottom: 46px;
+  }
+}
+
 .company_profile .line {
   width: 1px;
   height: 60px;

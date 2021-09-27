@@ -103,7 +103,14 @@ body {
     text-align: justify;
     letter-spacing: -1.2px;
     line-height: 32px;
+
+    &.content {
+        @media (max-width:750px) {
+            padding-bottom: 46px;
+        }
+    }
   }
+
 
   .line {
     width: 1px;
