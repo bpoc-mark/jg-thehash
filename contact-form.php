@@ -213,7 +213,7 @@ function validation($data)
     if (empty($data['confirm_email'])) {
         $error['confirm_email'] = "「メールアドレス」は入力必須項目です。";
     } elseif ($data['email'] !== $data['confirm_email']) {
-        $error['confirm_email'] = "Email Adress must be the same";
+        $error['confirm_email'] = "メールアドレスは同じである必要があります";
     }
 
     // 氏名のバリデーション
